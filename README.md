@@ -14,7 +14,7 @@
 
 ## Extra Features
 - Implemented **instancing** for the asteroid belt.
-- Bloom effect with **framebuffer**.
+- Bloom effect with HDR and **framebuffer**.
 - Skybox with **cubemap** for immersive experience.
 
 ## Credits

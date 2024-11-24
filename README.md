@@ -14,8 +14,10 @@
 
 ## Extra Features
 - Implemented **instancing** for the asteroid belt.
-- Bloom effect with HDR and **framebuffer**.
+- Bloom effect with **HDR** and **framebuffer**.
 - Skybox with **cubemap** for immersive experience.
+- Flashlight with realistic color split at the rim.
+- Earth's Night lights.
 
 ## Credits
 Textures by [Solar System Scope](https://www.solarsystemscope.com/) and [JHT's Planet Pixel Emporium](https://planetpixelemporium.com/planets.html)

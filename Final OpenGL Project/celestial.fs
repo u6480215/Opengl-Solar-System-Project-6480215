@@ -149,8 +149,6 @@ void main() {
     vec3 result = ((diffuse + specularFinal + terminatorLine + rimLight) * sunAttenuation*lightColor.rgb) + 
                 (ambient + spotlight + spotlightSpecularFinal  + backLight + edgeLight+nightLights);
 
-    // Add night map contribution
-
     // Apply gamma correction
     if (!haveBloom) result = pow(result, vec3(1.0 / gamma));
     result = vec3(1.0f) - exp(-result * exposure);

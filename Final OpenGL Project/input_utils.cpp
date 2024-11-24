@@ -23,7 +23,6 @@ extern bool bloom;
 extern bool skyBoxOn;
 extern float exposureVal;
 // Utility function to compile shaders
-//unsigned int createShaderProgram(const char* vertexShaderSource, const char* fragmentShaderSource);
 GLuint compileShader(GLenum type, const char* source) {
     GLuint shader = glCreateShader(type);
     glShaderSource(shader, 1, &source, nullptr);
@@ -44,6 +43,7 @@ GLuint createProgram(const char* vertexShaderSource, const char* fragmentShaderS
 
     return program;
 }
+
 void printControls() {
     cout << "[W][A][S][D] [SPACE] [SHIFT] for Movement.\n";
     cout << "[Ctrl] Sprint.\n";
@@ -55,9 +55,9 @@ void printControls() {
     cout << "[B] Toggle Skybox.\n";
     cout << "[Scroll] Zoom.\n";
     cout << "[X] Bloom\n";
-    cout << "[UP] [DOWN] Exposure.\n";
-   
+    cout << "[UP] [DOWN] Exposure.\n"; 
 }
+
 void processInput(GLFWwindow* window) {
     static bool pKeyPressed = false; // To prevent multiple triggers while key is held
     static bool paused = false;     // This will track whether the simulation is paused
@@ -85,8 +85,6 @@ void processInput(GLFWwindow* window) {
     if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
         exposureVal = std::max(0.005f, exposureVal - 0.005f);
 
-
-
     if (glfwGetKey(window, GLFW_KEY_P) == GLFW_PRESS) {
         if (!pKeyPressed) {
             paused = !paused;  // Toggle the paused state
@@ -103,6 +101,7 @@ void processInput(GLFWwindow* window) {
     else {
         pKeyPressed = false;
     }
+
     if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
     {
         cameraSpeed = 0.5f;
@@ -111,6 +110,7 @@ void processInput(GLFWwindow* window) {
     {
         cameraSpeed = 0.1f;
     }
+
     static bool fKeyPressed = false;
     if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS) {
         if (!fKeyPressed) {
@@ -121,6 +121,7 @@ void processInput(GLFWwindow* window) {
     else {
         fKeyPressed = false;
     }
+
     static bool bKeyPressed = false;
     if (glfwGetKey(window, GLFW_KEY_B) == GLFW_PRESS) {
         if (!bKeyPressed) {
@@ -142,7 +143,6 @@ void processInput(GLFWwindow* window) {
     else {
         tKeyPressed = false;
     }
-
 
     static bool xKeyPressed = false;
     if (glfwGetKey(window, GLFW_KEY_X) == GLFW_PRESS) {

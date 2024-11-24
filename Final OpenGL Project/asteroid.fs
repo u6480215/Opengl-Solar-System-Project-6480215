@@ -25,7 +25,6 @@ float outerCutoff = 0.97f;   // Slightly larger for smoother transition
 float a = 0.02;              // Refined decay factors for more realistic falloff
 float b = 0.6;
 uniform bool haveBloom; 
-uniform bool flipped;
 
 uniform float exposure;
 void main()
@@ -86,7 +85,7 @@ void main()
         float attenuation = 1.5f / (a * dist * dist + b * dist + 1.0f);
 
         // Spotlight diffuse component
-        vec3 coreColor = vec3(0.0, 0.0, 0.82) * intensity; // Cyan core
+        vec3 coreColor = vec3(0.0, 0.0, 0.82) * intensity; // blue core
         vec3 ringColor1 = vec3(0.0, 0.81, 0.0) * ringIntensity1; // Fading green ring
         vec3 ringColor2 = vec3(0.8, 0.0, 0.0) * ringIntensity2; // Fading red ring
         spotlight = attenuation * texture(texture1, TexCoords).rgb * (coreColor + ringColor1 + ringColor2) * intensity;

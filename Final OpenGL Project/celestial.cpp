@@ -246,10 +246,10 @@ std::vector<glm::mat4> asteroids(float beltRadius, float beltWidth, float outlie
         float scaleChance = static_cast<float>(rand()) / RAND_MAX;
         float scale;
         if (scaleChance < 0.01f) { // 1% chance for a larger asteroid
-            scale = 0.3f + static_cast<float>(rand()) / RAND_MAX * 1.2f; // Large scale between 1.0 and 2.5
+            scale = 0.3f + static_cast<float>(rand()) / RAND_MAX * 0.8f; // Large scale between 0.3 and 1.1
         }
         else if (scaleChance < 0.017f) { // 1.7% chance for a large asteroid
-            scale = 0.2f + static_cast<float>(rand()) / RAND_MAX * 0.7f; // Large scale between 1.0 and 2.5
+            scale = 0.2f + static_cast<float>(rand()) / RAND_MAX * 0.7f; // Large scale between 0.2 and 0.9
         }
         else {
             scale = 0.1f + static_cast<float>(rand()) / RAND_MAX * 0.3f; // Normal scale between 0.1 and 0.4

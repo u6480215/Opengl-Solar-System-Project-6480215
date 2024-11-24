@@ -86,7 +86,7 @@ void main() {
         float attenuation = 1.5f / (a * dist * dist + b * dist + 1.0f);
 
         // Spotlight diffuse component
-        vec3 coreColor = vec3(0.0, 0.0, 0.82) * intensity; // Cyan core
+        vec3 coreColor = vec3(0.0, 0.0, 0.82) * intensity; // blue core
         vec3 ringColor1 = vec3(0.0, 0.81, 0.0) * ringIntensity1; // Fading green ring
         vec3 ringColor2 = vec3(0.8, 0.0, 0.0) * ringIntensity2; // Fading red ring
         spotlight = attenuation * cloudBaseColor * (coreColor + ringColor1 + ringColor2) * intensity;
@@ -126,7 +126,7 @@ void main() {
     vec3 result = vec3(1.0f) - exp(-finalColor * exposure);
     FragColor = vec4(result, cloudAlpha);
 
-    	float brightness = dot(FragColor.rgb, vec3(0.2126f, 0.7152f, 0.0722f));
+    float brightness = dot(FragColor.rgb, vec3(0.2126f, 0.7152f, 0.0722f));
     if(brightness > 0.15f)
         BloomColor = vec4(FragColor.rgb, cloudAlpha);
     else

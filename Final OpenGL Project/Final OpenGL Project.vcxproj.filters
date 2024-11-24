@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="depedencies">
+      <UniqueIdentifier>{1cc451b1-fd5f-4895-bb5b-574f31a47dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="depedencies\lib">
+      <UniqueIdentifier>{a11f1a96-9271-481c-b617-06f82259c854}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Final OpenGL Project.cpp">
@@ -62,6 +68,9 @@
     <ClInclude Include="celestial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="skyBox.vs" />
@@ -79,6 +88,7 @@
     <None Include="blur.frag" />
     <None Include="asteroid.vs" />
     <None Include="asteroid.fs" />
+    <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\earth.jpg">
@@ -117,5 +127,22 @@
     <Image Include="..\container.jpg">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\dependencies\lib\glew32.lib">
+      <Filter>depedencies\lib</Filter>
+    </Library>
+    <Library Include="..\dependencies\lib\glew32s.lib">
+      <Filter>depedencies\lib</Filter>
+    </Library>
+    <Library Include="..\dependencies\lib\glfw3.lib">
+      <Filter>depedencies\lib</Filter>
+    </Library>
+    <Library Include="..\dependencies\lib\glut.lib">
+      <Filter>depedencies\lib</Filter>
+    </Library>
+    <Library Include="..\dependencies\lib\glut32.lib">
+      <Filter>depedencies\lib</Filter>
+    </Library>
   </ItemGroup>
 </Project>

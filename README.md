@@ -9,7 +9,7 @@
 - [T] Toggle Path.
 - [B] Toggle Skybox.
 - [Scroll] Zoom
-- [X] Bloom
+- [\X] Bloom
 - [UP], [DOWN] Camera Exposure.
 
 ## Extra Features

@@ -150,7 +150,6 @@ void main() {
                 (ambient + spotlight + spotlightSpecularFinal  + backLight + edgeLight+nightLights);
 
     // Add night map contribution
-    //result += nightLights;
 
     // Apply gamma correction
     if (!haveBloom) result = pow(result, vec3(1.0 / gamma));

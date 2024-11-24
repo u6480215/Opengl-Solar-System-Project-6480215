@@ -196,7 +196,7 @@ int main()
    GLuint neptuneTexture = loadTexture("../textures/planets/neptune.jpg");
    GLuint plutoTexture = loadTexture("../textures/planets/pluto.jpg");
    // planets
-   PlanetParams sun(0.0f, 0.0f, 2.0f, 0.0f, 0.0f, 0.0, 8.0f, sunTexture, 30.6f, 0.0f, 0.0f, glm::vec3(0.0), -1.0f);               //rim                        //term                                          // edge
+   PlanetParams sun(0.0f, 0.0f, 2.0f, 0.0f, 0.0f, 0.0, 8.0f, sunTexture, 1.2f, 0.0f, 0.0f, glm::vec3(9.0,2.0,0.0), 20.0f, glm::vec3(0.0), 0.0f, glm::vec3(50.5), -50.0f);               //rim                        //term                                          // edge
    PlanetParams mercury(14.0f, 47.87f, 360.0f / 1406.4f, 0.034f, 0.206f, 7.0f, 0.5f, mercuryTexture, 0.0002f, 0.03f, 10.0f, glm::vec3(0.5f, 0.4f, 0.2f), 3.5f, glm::vec3(0.025f, 0.0015f, 0.0f) + 0.02f, 2.9f);
    PlanetParams venus(19.0f, 35.02f, 360.0f / (-243.0f * 24.0f), 177.4f, 0.007f, 3.4f, 0.8f, venusTexture, 0.001f, 0.04f, 10.0f, glm::vec3(0.8f, 0.4f, 0.3f), 4.45f, glm::vec3(0.02f, 0.0095f, 0.0f) + 0.02f, 2.9f);
    PlanetParams earth(24.0f, 29.78f, 360.0f, 23.5f, 0.017f, 0.0f, 1.0f, earthTexture, 0.00088f, 0.74f, 9.5f, glm::vec3(0.10, 0.26, 0.84), 10.32f, glm::vec3(0.0003, 0.005, 0.016), 2.6f, glm::vec3(-0.02f, -0.05f, 0.0f), 5.0f, earthSpecularMap, true, earthNightMap, true);
